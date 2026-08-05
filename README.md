@@ -57,10 +57,6 @@ Multi-agent finance advisor (budgeting, debt, tax, retirement agents) with 100% 
 Book-discovery platform merging Open Library and Project Gutenberg into one catalog with content-based recommendations and reading-streak tracking — a dependency-light, single-deployable Next.js app.
 `Next.js` `TypeScript` `SQLite`
 
-**💨 Vaayusaathi — Air Quality Prediction Dashboard**
-Random Forest regression on a 13,149-row dataset (1990–2025), reaching **92.43% classification accuracy** for PM2.5 risk levels in Delhi, served via a Flask API with feature-importance breakdowns.
-`Python` `scikit-learn` `Flask` `React`
-
 ---
 
 ### 🧰 Tech Stack
