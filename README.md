@@ -1,100 +1,223 @@
-<h1 align="center">Hi, I'm Prapti 👋</h1>
-<h3 align="center">Full-stack developer building production-grade AI, cloud, and systems projects — solo, end to end.</h3>
+<div align="center">
 
-<p align="center">
-  <a href="https://linkedin.com/in/praptirnayak"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:praptinayak2005@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white" /></a>
-  <a href="https://prn-speaks.blogspot.com"><img src="https://img.shields.io/badge/Blog-FF5722?style=flat&logo=blogger&logoColor=white" /></a>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,50:2C5364,100:00C9A7&height=220&section=header&text=Prapti%20Nayak&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20%2B%20AI%20Systems%20Builder%20%E2%80%94%20Solo%2C%20End%20to%20End&descAlignY=58&descSize=18" width="100%"/>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=2800&pause=900&color=00C9A7&center=true&vCenter=true&multiline=true&repeat=true&width=780&height=90&lines=I+don't+build+demos+%E2%80%94+I+build+systems+that+actually+run.;eBPF+kernels+%7C+multi-agent+pipelines+%7C+production+ML;India-first+design.+Deterministic+where+it+matters.;9.51+CGPA+%C2%B7+RIT+%C2%B7+Information+Science+%26+Engineering" alt="Typing SVG" />
+
+<p>
+<a href="https://linkedin.com/in/praptirnayak"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="mailto:praptinayak2005@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="https://prn-speaks.blogspot.com"><img src="https://img.shields.io/badge/Blog-FF5722?style=for-the-badge&logo=blogger&logoColor=white"/></a>
+<a href="https://github.com/praarn"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
 </p>
 
----
+<img src="https://komarev.com/ghpvc/?username=praarn&style=for-the-badge&color=00C9A7&label=PROFILE+VIEWS" />
 
-### 🧭 About Me
+</div>
 
-- 🎓 B.E. in Information Science & Engineering, Ramaiah Institute of Technology (CGPA: 9.51/10)
-- 🛠️ I design and ship complete systems — backend, frontend, ML, and infra — as a solo owner, not just the AI/ML layer
-- 🔍 Currently exploring AI observability, LLM routing, and developer tooling as underexplored startup spaces
-- 🇮🇳 Interested in India-localized applications — several projects use Indian datasets, geography, and compliance context by design
-- ✍️ I write build breakdowns and reviews at [prn-speaks.blogspot.com](https://prn-speaks.blogspot.com)
+<br/>
 
----
+## `whoami`
 
-### 🚀 Featured Projects
+```yaml
+name: Prapti Nayak
+role: Full-stack developer — backend, frontend, ML, and infra, owned end to end
+education: B.E. Information Science & Engineering, Ramaiah Institute of Technology (CGPA 9.51/10)
+focus: AI observability · LLM orchestration · developer tooling · India-localized systems
+philosophy:
+  - "Deterministic logic where correctness matters; LLMs where judgment does — never the reverse."
+  - "Every audited project has a documented list of bugs I found and fixed, not just what shipped clean."
+  - "If it can't run against a real cloud account / real dataset / real API, it's a mockup, not a project."
+currently: exploring AI observability, LLM routing, and dev tooling as underexplored startup spaces
+```
 
-**🛡️ [Autonomous Cyber Defense System (ACDS)](https://github.com/praptirn)**
-Real-time intrusion detection combining eBPF kernel telemetry and a 4-model ML ensemble (XGBoost, Random Forest, Autoencoder, Isolation Forest) — **99.16% accuracy, 0.9995 AUC-ROC** on 1.1M+ samples. Live attack-path modeling in Neo4j streamed to a React dashboard over Kafka/WebSockets, with an on-device LLM (Llama 3.2) generating MITRE ATT&CK-mapped threat explanations.
-`Python` `XGBoost` `PyTorch` `Kafka` `Neo4j` `FastAPI` `React` `eBPF`
+<br/>
 
-**🌍 Sentinel — AI Disaster Prediction & Response System**
-India-focused disaster intelligence platform: ML risk prediction on live USGS seismic/weather data, an NLP pipeline detecting social-media panic signals, a personalized Individual Vulnerability Score, and graph-based evacuation-route optimization with real-time WebSocket alert dispatch.
+## Featured Builds
+
+Each project below ships a full stack — not just a model in a notebook. Expand any card for the real architecture.
+
+<br/>
+
+<details open>
+<summary><b>🛡️ Autonomous Cyber Defense System (ACDS)</b> — real-time intrusion detection, kernel to dashboard in under 5 seconds</summary>
+<br/>
+
+A 7-layer autonomous defense pipeline: **eBPF kernel probes** for syscall-level telemetry, deep packet inspection on encrypted traffic *without decrypting it*, a **4-model ML ensemble** (XGBoost, Random Forest, Autoencoder, Isolation Forest), an on-device LLM (Llama 3.2) that turns raw detections into MITRE ATT&CK-mapped explanations, and a Neo4j attack-graph engine with risk propagation — all streamed live to a React dashboard over Kafka/WebSockets.
+
+- **99.16% accuracy · 0.9995 AUC-ROC** across 1.1M+ samples
+- Built to solve real SOC pain: signature-based IDS misses zero-days and encrypted C2 traffic, and analysts drown in >90% false-positive rates
+- Every alert is fully attributed: ML-scored, LLM-explained, and graphed in attack-path context
+
+`Python` `XGBoost` `PyTorch` `eBPF` `Kafka` `Neo4j` `FastAPI` `React`
+</details>
+
+<details>
+<summary><b>🌍 Sentinel</b> — AI disaster prediction & response system, built India-first</summary>
+<br/>
+
+A full-stack disaster intelligence platform running on **live USGS seismic and weather data**: an ML risk-prediction engine, an NLP layer reading social media for panic signals, a per-user **Individual Vulnerability Score**, graph-based evacuation-route optimization (NetworkX), satellite hotspot analysis, a shelter/resource allocation optimizer, and a responder AI copilot — with multi-channel real-time alert dispatch over WebSockets and offline PWA support for low-connectivity disaster zones.
+
 `FastAPI` `Next.js` `NetworkX` `HuggingFace` `WebSockets`
+</details>
 
-**☁️ CloudOps Enterprise Platform**
-Live cloud-ops dashboard backed by real deployable infrastructure — Terraform/Docker/Kubernetes IaC provisioning actual AWS resources, a working SageMaker fraud-detection endpoint, and CI/CD pipelines in GitHub Actions and Jenkins.
+<details>
+<summary><b>☁️ CloudOps Enterprise Platform</b> — a dashboard backed by real, deployable infrastructure</summary>
+<br/>
+
+Two layers that work together: a live operations console visualizing services, network topology, security posture, and ML models — and **real Terraform/Docker/Kubernetes IaC** that a user can run against an actual AWS account to produce the infrastructure the console visualizes, including a genuinely working SageMaker fraud-detection endpoint and CI/CD in GitHub Actions and Jenkins. Runs standalone as a demo, or for real against live cloud.
+
 `Terraform` `Docker` `Kubernetes` `AWS SageMaker` `Node.js`
+</details>
 
-**📰 Verafide — Fake News Detection Platform**
-Locally-trained ML classifier layered with LLM-reasoned verdicts, trained on a 13,343-row balanced dataset across 13 topic buckets. Includes OCR-capable document/batch ingestion and Groq-backed summarization — plus a diagnosed and corrected 95%→86% accuracy gap caused by narrow-dataset overfitting.
+<details>
+<summary><b>📰 Verafide</b> — fake news detection, and the 95%→86% accuracy gap I found and fixed</summary>
+<br/>
+
+A locally-trained ML classifier layered with LLM-reasoned verdicts (Groq), OCR-capable document/batch ingestion, and an AI summarizer chatbot, presented through a custom "verification desk" editorial UI. Trained on a 13,343-row balanced dataset across 13 topic buckets — and shipped with a diagnosed root cause for an accuracy drop from a benchmark-looking 95% down to a real-world 86%, traced to narrow-dataset overfitting and corrected rather than hidden.
+
 `FastAPI` `SQLAlchemy` `React` `Groq` `OCR`
+</details>
 
-**📊 Skill Gap Mapper**
-Career-intelligence platform scoring resume-to-role fit with a deterministic, weighted algorithm (50% skill coverage / 30% experience relevance / 20% project quality), live job-market data, ATS checks, and resume optimization — audited post-build to catch and fix 7 real production issues.
+<details>
+<summary><b>🧭 Saral</b> — bureaucracy simplifier, a genuine polyglot microservice system</summary>
+<br/>
+
+Four independent services — frontend, API gateway, a Python AI service, and a background worker — talking over HTTP and a shared Postgres/Redis backend, built on one rule: **the fast path never blocks on the slow path.** Document upload returns instantly; extraction, OCR, and LLM reasoning run asynchronously on a durable BullMQ queue that survives crashes. The AI service only trusts requests carrying an internal shared token, so an accidental port exposure still isn't an open door.
+
+`Node.js` `Python` `BullMQ` `Postgres` `Redis`
+</details>
+
+<details>
+<summary><b>🔬 Research Assistant Crew</b> — five LLM agents, every claim gets a confidence stamp</summary>
+<br/>
+
+A question goes in; five specialized agents — planner, searcher, summarizer, fact-checker, writer — collaborate to produce a sourced report where every claim in the prose carries a visible, hoverable verdict: Verified, Plausible, Unverified, or Contradicted. Built entirely on free-tier infrastructure (Groq LLM, DuckDuckGo search, no paid API), and designed to degrade gracefully rather than crash when the free tier gets rate-limited.
+
+`FastAPI` `React` `Groq` `DuckDuckGo Search`
+</details>
+
+<details>
+<summary><b>📊 Data Pipeline Orchestrator</b> — five agents, zero silent transformations</summary>
+<br/>
+
+Ingest → Clean → Analyze → Visualize → Report, as five stateless agents behind a REST API and a deliberately zero-build vanilla JS frontend. Cleaning proposes a dry-run diff; nothing touches the data until a human approves it. Every statistical finding is backed by a real `scipy` test — t-test, ANOVA, Pearson, regression — never a heuristic dressed up as significance.
+
+`Flask` `pandas` `scipy` `Vanilla JS`
+</details>
+
+<details>
+<summary><b>📚 clutchExams</b> — an academic resource platform, on its third real rebuild</summary>
+<br/>
+
+A folder-tree academic resource browser — notes, papers, slides — with recursive global search, open browsing/download with no forced signup, and a single audited admin account (JWT + bcrypt) for uploads and management. Rebuilt twice: from a shared-token prototype to a real per-account auth system with a full login audit trail, without ever touching the neo-brutalist frontend identity that made v1 worth keeping.
+
+`Node.js` `Express` `React` `JWT` `Tailwind`
+</details>
+
+<details>
+<summary><b>📈 Skill Gap Mapper</b> — career-intelligence, audited post-build for real production bugs</summary>
+<br/>
+
+Resume-to-role fit scored by a deterministic, weighted algorithm — 50% skill coverage, 30% experience relevance, 20% project quality — layered with live job-market data, ATS compatibility checks, and resume optimization suggestions. Shipped with a documented post-launch audit that caught and fixed 7 real issues, rather than a README that pretends the first build was clean.
+
 `FastAPI` `Next.js` `TypeScript` `Groq`
+</details>
 
-**🏥 Healthcare Cost Predictor**
-Rule-based India medical-cost estimator with government health-scheme eligibility checks and empanelled-hospital surfacing — deliberately transparent, with every figure traceable to a structured data source instead of LLM output.
+<details>
+<summary><b>🏥 Healthcare Cost Predictor</b> — every number is traceable, none of them come from an LLM</summary>
+<br/>
+
+An India medical-cost estimator with government health-scheme eligibility checks and empanelled-hospital surfacing. The one non-negotiable design rule: no cost figure or eligibility result is ever generated by an LLM — every number traces back to a structured JSON data source, and every approximation is explicitly labeled as one instead of being silently substituted.
+
 `FastAPI` `Pydantic` `Next.js` `TypeScript`
+</details>
 
-**⚖️ Public Grievance Analyzer**
-Governance-intelligence platform clustering public complaints via HDBSCAN embeddings, ranking severity, and routing to responsible authorities — classification stays deterministic and auditable, with LLM usage scoped only to summarization.
+<details>
+<summary><b>⚖️ Public Grievance Analyzer</b> — governance intelligence a government official could actually defend</summary>
+<br/>
+
+Clusters public complaints via HDBSCAN embeddings, ranks severity, and routes each cluster to the responsible authority. Classification is deliberately deterministic and auditable — LLM usage is scoped only to summarization — because a government user needs to be able to defend a system-assisted decision, not just trust a black box.
+
 `FastAPI` `PostgreSQL` `pgvector` `HDBSCAN`
+</details>
 
-**💰 Ledger — Personal Finance Advisor**
-Multi-agent finance advisor (budgeting, debt, tax, retirement agents) with 100% deterministic calculations independent of LLM availability, including an employer-match-gap analyzer using real marginal tax-bracket data.
+<details>
+<summary><b>💰 Ledger</b> — a personal finance advisor that still runs if the LLM doesn't</summary>
+<br/>
+
+A multi-agent finance system — budgeting, debt, tax, and retirement agents — where every calculation is 100% deterministic and independent of LLM availability, including an employer-match-gap analyzer built on real marginal tax-bracket data. The LLM explains; it never computes.
+
 `FastAPI` `React` `Groq` `SQLite`
+</details>
 
-**📚 Shelfwise**
-Book-discovery platform merging Open Library and Project Gutenberg into one catalog with content-based recommendations and reading-streak tracking — a dependency-light, single-deployable Next.js app.
+<details>
+<summary><b>📖 Shelfwise</b> — a book platform that deliberately stayed dependency-light</summary>
+<br/>
+
+Merges Open Library and Project Gutenberg into a single catalog with content-based recommendations, reading-level scoring, and reading-streak tracking — built as a single deployable Next.js app on purpose, trading a heavier stack for something that's actually simple to run and reason about.
+
 `Next.js` `TypeScript` `SQLite`
+</details>
 
----
+<br/>
 
-### 🧰 Tech Stack
+## Language & Tool Fluency
 
-**Languages:** ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white) ![Java](https://img.shields.io/badge/-Java-007396?style=flat&logo=openjdk&logoColor=white) ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat&logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) ![C++](https://img.shields.io/badge/-C++-00599C?style=flat&logo=cplusplus&logoColor=white)
+<div align="center">
+<img src="https://skillicons.dev/icons?i=python,java,ts,js,cpp,react,nextjs,tailwind,fastapi,flask,nodejs,pytorch,sklearn,huggingface,postgres,mysql,sqlite,neo4j,mongodb,docker,kubernetes,terraform,aws,kafka,git,github,vscode&theme=dark&perline=9" />
+</div>
 
-**Frontend:** ![React](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=black) ![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat&logo=nextdotjs&logoColor=white) ![Tailwind](https://img.shields.io/badge/-Tailwind-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+<br/>
 
-**Backend:** ![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=flat&logo=fastapi&logoColor=white) ![Flask](https://img.shields.io/badge/-Flask-000000?style=flat&logo=flask&logoColor=white) ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
+## GitHub, by the Numbers
 
-**ML/AI:** ![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white) ![scikit--learn](https://img.shields.io/badge/-scikit--learn-F7931E?style=flat&logo=scikitlearn&logoColor=white) ![HuggingFace](https://img.shields.io/badge/-HuggingFace-FFD21E?style=flat&logo=huggingface&logoColor=black)
+<div align="center">
 
-**Databases:** ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white) ![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat&logo=mysql&logoColor=white) ![SQLite](https://img.shields.io/badge/-SQLite-003B57?style=flat&logo=sqlite&logoColor=white) ![Neo4j](https://img.shields.io/badge/-Neo4j-4581C3?style=flat&logo=neo4j&logoColor=white) ![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
+<img height="165" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=praarn&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
+<img height="165" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=praarn&layout=compact&theme=tokyonight&hide_border=true"/>
 
-**Cloud & DevOps:** ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/-Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white) ![Terraform](https://img.shields.io/badge/-Terraform-7B42BC?style=flat&logo=terraform&logoColor=white) ![AWS](https://img.shields.io/badge/-AWS-232F3E?style=flat&logo=amazonaws&logoColor=white) ![Kafka](https://img.shields.io/badge/-Kafka-231F20?style=flat&logo=apachekafka&logoColor=white)
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=praarn&theme=tokyonight&hide_border=true" />
 
----
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=praarn&theme=tokyo-night&hide_border=true" width="98%"/>
 
-### 📈 GitHub Stats
+</div>
 
-<p align="center">
-  <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=praptirn&show_icons=true&theme=default&hide_border=true" height="165" />
-  <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=praptirn&layout=compact&hide_border=true" height="165" />
-</p>
+> **Note on the stats widgets:** the primary `github-readme-stats.vercel.app` endpoint is frequently overloaded — a long-running, widely reported issue on that project, not specific to this profile. The mirror above (rickstaa's fork) is the most reliable public alternative. If any widget shows a broken-image icon: hard-refresh (GitHub caches these aggressively), wait a few minutes, or fork [anuraghazra/github-readme-stats](https://github.com/anuraghazra/github-readme-stats) and deploy your own instance to Vercel (free, ~2 minutes) and point the URL at that instead.
 
-> **Note:** the official `github-readme-stats.vercel.app` endpoint is frequently overloaded/down (it's a known, long-running issue on that project — not specific to your setup). The mirror above (`rickstaa`'s fork) is the most reliable public alternative. If it also fails to load:
-> - Wait and hard-refresh — GitHub caches README images aggressively, so a dead image can persist even after the source recovers
-> - Or self-host your own instance by forking [anuraghazra/github-readme-stats](https://github.com/anuraghazra/github-readme-stats) and deploying it to your own Vercel account (free, ~2 min), then point the URLs above at your own domain
-> - Or drop the stats widgets entirely and keep the badges — plenty of strong profile READMEs skip them
+<br/>
 
----
+## Contribution Snake
 
-### 🏅 Certifications
+<div align="center">
+<img src="https://raw.githubusercontent.com/praarn/praarn/output/github-contribution-grid-snake-dark.svg" width="100%"/>
+</div>
 
-- NPTEL – Artificial Intelligence
-- NPTEL – Machine Learning
-- Snowflake – Python and SQL
+> This animation renders itself from your real contribution graph — it needs a one-time GitHub Actions setup (using [Platane/snk](https://github.com/Platane/snk)) that commits the SVG to an `output` branch on a schedule. Steps:
+> 1. In your `praarn/praarn` repo, add `.github/workflows/snake.yml` using the Platane/snk action (points at branch `output`).
+> 2. Push once — the Action generates the SVG automatically on schedule.
+> The `<img>` tag above is already wired to the resulting file, so once the workflow runs, the animation appears with no further edits needed.
 
----
+<br/>
 
-<p align="center"><i>Open to full-stack, AI, and platform engineering roles. Reach out via LinkedIn or email above.</i></p>
+## Certifications
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/NPTEL-Artificial%20Intelligence-2C5364?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/NPTEL-Machine%20Learning-2C5364?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Snowflake-Python%20%26%20SQL-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white"/>
+
+</div>
+
+<br/>
+
+<div align="center">
+
+### Open to full-stack, AI, and platform engineering roles.
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=3500&pause=1200&color=8A8A8A&center=true&vCenter=true&width=600&lines=Reach+out+via+LinkedIn+or+email+above+%E2%80%94+I+reply.;Currently+shipping+in+AI+observability+%26+LLM+routing." />
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00C9A7,50:2C5364,100:0F2027&height=120&section=footer" width="100%"/>
+
+</div>
