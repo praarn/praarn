@@ -82,9 +82,14 @@ Random Forest regression on a 13,149-row dataset (1990–2025), reaching **92.43
 ### 📈 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=praptirn&show_icons=true&theme=default&hide_border=true" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=praptirn&layout=compact&hide_border=true" height="165" />
+  <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=praptirn&show_icons=true&theme=default&hide_border=true" height="165" />
+  <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=praptirn&layout=compact&hide_border=true" height="165" />
 </p>
+
+> **Note:** the official `github-readme-stats.vercel.app` endpoint is frequently overloaded/down (it's a known, long-running issue on that project — not specific to your setup). The mirror above (`rickstaa`'s fork) is the most reliable public alternative. If it also fails to load:
+> - Wait and hard-refresh — GitHub caches README images aggressively, so a dead image can persist even after the source recovers
+> - Or self-host your own instance by forking [anuraghazra/github-readme-stats](https://github.com/anuraghazra/github-readme-stats) and deploying it to your own Vercel account (free, ~2 min), then point the URLs above at your own domain
+> - Or drop the stats widgets entirely and keep the badges — plenty of strong profile READMEs skip them
 
 ---
 
