@@ -1,10 +1,12 @@
 name: generate snake
+
 on:
   schedule:
     - cron: "0 0 * * *"   # once a day
   workflow_dispatch: {}
   push:
     branches: [ main ]
+
 jobs:
   generate:
     permissions:
