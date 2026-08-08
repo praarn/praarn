@@ -222,37 +222,7 @@ Merges Open Library and Project Gutenberg into a single catalog with content-bas
 <img src="https://raw.githubusercontent.com/praarn/praarn/output/github-contribution-grid-snake-dark.svg" width="100%"/>
 </div>
 
-> **Why it's not loading yet:** this isn't a broken link — it's expected until the one-time GitHub Actions setup below is done. The image points at a file (`output/github-contribution-grid-snake-dark.svg`) that doesn't exist in your `praarn/praarn` repo until an Action generates and commits it, so right now the URL 404s.
->
-> **Setup (one time, ~2 minutes):**
-> 1. In your `praarn/praarn` repo on GitHub, create a new file at `.github/workflows/snake.yml` and paste in:
-> ```yaml
-> name: generate snake
-> on:
->   schedule:
->     - cron: "0 0 * * *"   # once a day
->   workflow_dispatch: {}
->   push:
->     branches: [ main ]
-> jobs:
->   generate:
->     runs-on: ubuntu-latest
->     steps:
->       - uses: Platane/snk@v3
->         with:
->           github_user_name: praarn
->           outputs: |
->             dist/github-contribution-grid-snake.svg
->             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
->       - uses: crazy-max/ghaction-github-pages@v4
->         with:
->           target_branch: output
->           build_dir: dist
->         env:
->           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-> ```
-> 2. Commit it, then go to the **Actions** tab and either wait for the scheduled run or click **Run workflow** to trigger it immediately.
-> 3. Once it finishes, it pushes the SVG to a new `output` branch — the `<img>` tag above is already pointed at that file, so the animation just appears. No further README edits needed.
+
 
 <br/>
 
