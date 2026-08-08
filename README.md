@@ -9,6 +9,9 @@
 <a href="mailto:praptinayak2005@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 <a href="https://prn-speaks.blogspot.com"><img src="https://img.shields.io/badge/Blog-FF5722?style=for-the-badge&logo=blogger&logoColor=white"/></a>
 <a href="https://github.com/praarn"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
+<a href="https://leetcode.com/u/praarn/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white"/></a>
+<a href="https://www.notion.so/0b156230180745709db431ff8d7cc8b9"><img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white"/></a>
+<a href="https://www.canva.com/projects"><img src="https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white"/></a>
 </p>
 
 <img src="https://komarev.com/ghpvc/?username=praarn&style=for-the-badge&color=00C9A7&label=PROFILE+VIEWS" />
@@ -20,16 +23,29 @@
 ## `whoami`
 
 ```yaml
-name: Prapti Nayak
+name: Prapti Ramachandra Nayak
+location: Bengaluru, India
 role: Full-stack developer — backend, frontend, ML, and infra, owned end to end
 education: B.E. Information Science & Engineering, Ramaiah Institute of Technology (CGPA 9.51/10)
-focus: AI observability · LLM orchestration · developer tooling · India-localized systems
+focus: AI observability · LLM orchestration · developer tooling · India-localized civic-tech
+domains: disaster response · legal aid · healthcare access · public grievance redressal · personal finance
 philosophy:
   - "Deterministic logic where correctness matters; LLMs where judgment does — never the reverse."
   - "Every audited project has a documented list of bugs I found and fixed, not just what shipped clean."
   - "If it can't run against a real cloud account / real dataset / real API, it's a mockup, not a project."
 currently: exploring AI observability, LLM routing, and dev tooling as underexplored startup spaces
+outside_of_engineering: reading books, writing poetry and prose
 ```
+
+<br/>
+
+## Experience
+
+| Role | Organization | Duration |
+|---|---|---|
+| Project Intern | Pinnacle Labs (Remote) | Jul 2026 – Present |
+| Project Intern — built the Sentinel backend (FastAPI, WebSockets, JWT auth) + React/Vite frontend | Navodita Infotech (Remote) | Apr 2026 – May 2026 |
+| Content Writing Intern — wrote on social issues, supported fundraising outreach | InAmigos Foundation (Remote) | Mar 2026 – Apr 2026 |
 
 <br/>
 
@@ -40,7 +56,7 @@ Each project below ships a full stack — not just a model in a notebook. Expand
 <br/>
 
 <details open>
-<summary><b>🛡️ Autonomous Cyber Defense System (ACDS)</b> — real-time intrusion detection, kernel to dashboard in under 5 seconds</summary>
+<summary><a href="https://github.com/praarn/ACDS"><b>🛡️ Autonomous Cyber Defense System (ACDS)</b></a> — real-time intrusion detection, kernel to dashboard in under 5 seconds</summary>
 <br/>
 
 A 7-layer autonomous defense pipeline: **eBPF kernel probes** for syscall-level telemetry, deep packet inspection on encrypted traffic *without decrypting it*, a **4-model ML ensemble** (XGBoost, Random Forest, Autoencoder, Isolation Forest), an on-device LLM (Llama 3.2) that turns raw detections into MITRE ATT&CK-mapped explanations, and a Neo4j attack-graph engine with risk propagation — all streamed live to a React dashboard over Kafka/WebSockets.
@@ -53,7 +69,7 @@ A 7-layer autonomous defense pipeline: **eBPF kernel probes** for syscall-level 
 </details>
 
 <details>
-<summary><b>🌍 Sentinel</b> — AI disaster prediction & response system, built India-first</summary>
+<summary><a href="https://github.com/praarn/disasterResponseSystem"><b>🌍 Sentinel</b></a> — AI disaster prediction & response system, built India-first</summary>
 <br/>
 
 A full-stack disaster intelligence platform running on **live USGS seismic and weather data**: an ML risk-prediction engine, an NLP layer reading social media for panic signals, a per-user **Individual Vulnerability Score**, graph-based evacuation-route optimization (NetworkX), satellite hotspot analysis, a shelter/resource allocation optimizer, and a responder AI copilot — with multi-channel real-time alert dispatch over WebSockets and offline PWA support for low-connectivity disaster zones.
@@ -62,7 +78,7 @@ A full-stack disaster intelligence platform running on **live USGS seismic and w
 </details>
 
 <details>
-<summary><b>☁️ CloudOps Enterprise Platform</b> — a dashboard backed by real, deployable infrastructure</summary>
+<summary><a href="https://github.com/praarn/cloudOpsFunctional"><b>☁️ CloudOps Enterprise Platform</b></a> — a dashboard backed by real, deployable infrastructure</summary>
 <br/>
 
 Two layers that work together: a live operations console visualizing services, network topology, security posture, and ML models — and **real Terraform/Docker/Kubernetes IaC** that a user can run against an actual AWS account to produce the infrastructure the console visualizes, including a genuinely working SageMaker fraud-detection endpoint and CI/CD in GitHub Actions and Jenkins. Runs standalone as a demo, or for real against live cloud.
@@ -71,7 +87,7 @@ Two layers that work together: a live operations console visualizing services, n
 </details>
 
 <details>
-<summary><b>📰 Verafide</b> — fake news detection, and the 95%→86% accuracy gap I found and fixed</summary>
+<summary><a href="https://github.com/praarn/verafideFakeNewsDetector"><b>📰 Verafide</b></a> — fake news detection, and the 95%→86% accuracy gap I found and fixed</summary>
 <br/>
 
 A locally-trained ML classifier layered with LLM-reasoned verdicts (Groq), OCR-capable document/batch ingestion, and an AI summarizer chatbot, presented through a custom "verification desk" editorial UI. Trained on a 13,343-row balanced dataset across 13 topic buckets — and shipped with a diagnosed root cause for an accuracy drop from a benchmark-looking 95% down to a real-world 86%, traced to narrow-dataset overfitting and corrected rather than hidden.
@@ -80,12 +96,25 @@ A locally-trained ML classifier layered with LLM-reasoned verdicts (Groq), OCR-c
 </details>
 
 <details>
-<summary><b>🧭 Saral</b> — bureaucracy simplifier, a genuine polyglot microservice system</summary>
+<summary><a href="https://github.com/praarn/bureaucracySimplifier"><b>🧭 Saral</b></a> — bureaucracy simplifier, a genuine polyglot microservice system</summary>
 <br/>
 
 Four independent services — frontend, API gateway, a Python AI service, and a background worker — talking over HTTP and a shared Postgres/Redis backend, built on one rule: **the fast path never blocks on the slow path.** Document upload returns instantly; extraction, OCR, and LLM reasoning run asynchronously on a durable BullMQ queue that survives crashes. The AI service only trusts requests carrying an internal shared token, so an accidental port exposure still isn't an open door.
 
 `Node.js` `Python` `BullMQ` `Postgres` `Redis`
+</details>
+
+<details>
+<summary><a href="https://github.com/praarn/legalAdvisor"><b>⚖️ NyaySetu — AI Legal Navigator</b></a> — rights and next steps, cited to the actual Act and Section</summary>
+<br/>
+
+A multilingual (13 Indian languages) legal-guidance platform: describe a legal problem in plain language and get back your **rights** — each tied to a named Act and Section, never a vague generalisation — concrete next steps, a procedural timeline, a ready-to-fill document (complaint letter, legal notice, FIR draft), and a follow-up chat scoped to the situation. Six domains are covered (consumer, tenancy, employment, family, criminal, cyber), each backed by a transparent, inspectable keyword-scoring intent classifier instead of a black-box model — so a "why was I routed here" question always has a real answer.
+
+- **Urgency detection** flags situations implying immediate danger and surfaces emergency contacts (NALSA, Police, Women's/Child helplines) ahead of regular guidance
+- Auto-generates fillable legal documents with live preview and client-side PDF export
+- Deliberately backend-free — intent classification, document generation, and session state all run client-side or via a single serverless route — with the Groq-backed chat degrading gracefully to an offline rule-based engine when unconfigured
+
+`Next.js 16` `TypeScript` `Tailwind CSS v4` `Groq`
 </details>
 
 <details>
@@ -116,7 +145,7 @@ A folder-tree academic resource browser — notes, papers, slides — with recur
 </details>
 
 <details>
-<summary><b>📈 Skill Gap Mapper</b> — career-intelligence, audited post-build for real production bugs</summary>
+<summary><a href="https://github.com/praarn/skillGapMapper"><b>📈 Skill Gap Mapper</b></a> — career-intelligence, audited post-build for real production bugs</summary>
 <br/>
 
 Resume-to-role fit scored by a deterministic, weighted algorithm — 50% skill coverage, 30% experience relevance, 20% project quality — layered with live job-market data, ATS compatibility checks, and resume optimization suggestions. Shipped with a documented post-launch audit that caught and fixed 7 real issues, rather than a README that pretends the first build was clean.
@@ -125,7 +154,7 @@ Resume-to-role fit scored by a deterministic, weighted algorithm — 50% skill c
 </details>
 
 <details>
-<summary><b>🏥 Healthcare Cost Predictor</b> — every number is traceable, none of them come from an LLM</summary>
+<summary><a href="https://github.com/praarn/healthAssistant"><b>🏥 Healthcare Cost Predictor</b></a> — every number is traceable, none of them come from an LLM</summary>
 <br/>
 
 An India medical-cost estimator with government health-scheme eligibility checks and empanelled-hospital surfacing. The one non-negotiable design rule: no cost figure or eligibility result is ever generated by an LLM — every number traces back to a structured JSON data source, and every approximation is explicitly labeled as one instead of being silently substituted.
@@ -134,7 +163,7 @@ An India medical-cost estimator with government health-scheme eligibility checks
 </details>
 
 <details>
-<summary><b>⚖️ Public Grievance Analyzer</b> — governance intelligence a government official could actually defend</summary>
+<summary><a href="https://github.com/praarn/publicGrievanceIntelligence"><b>⚖️ Public Grievance Analyzer</b></a> — governance intelligence a government official could actually defend</summary>
 <br/>
 
 Clusters public complaints via HDBSCAN embeddings, ranks severity, and routes each cluster to the responsible authority. Classification is deliberately deterministic and auditable — LLM usage is scoped only to summarization — because a government user needs to be able to defend a system-assisted decision, not just trust a black box.
@@ -143,7 +172,7 @@ Clusters public complaints via HDBSCAN embeddings, ranks severity, and routes ea
 </details>
 
 <details>
-<summary><b>💰 Ledger</b> — a personal finance advisor that still runs if the LLM doesn't</summary>
+<summary><a href="https://github.com/praarn/financeLedgerAgentic"><b>💰 Ledger</b></a> — a personal finance advisor that still runs if the LLM doesn't</summary>
 <br/>
 
 A multi-agent finance system — budgeting, debt, tax, and retirement agents — where every calculation is 100% deterministic and independent of LLM availability, including an employer-match-gap analyzer built on real marginal tax-bracket data. The LLM explains; it never computes.
@@ -152,7 +181,7 @@ A multi-agent finance system — budgeting, debt, tax, and retirement agents —
 </details>
 
 <details>
-<summary><b>📖 Shelfwise</b> — a book platform that deliberately stayed dependency-light</summary>
+<summary><a href="https://github.com/praarn/shelfWiseOnlineLibrary"><b>📖 Shelfwise</b></a> — a book platform that deliberately stayed dependency-light</summary>
 <br/>
 
 Merges Open Library and Project Gutenberg into a single catalog with content-based recommendations, reading-level scoring, and reading-streak tracking — built as a single deployable Next.js app on purpose, trading a heavier stack for something that's actually simple to run and reason about.
@@ -206,7 +235,10 @@ Merges Open Library and Project Gutenberg into a single catalog with content-bas
 
 <img src="https://img.shields.io/badge/NPTEL-Artificial%20Intelligence-2C5364?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/NPTEL-Machine%20Learning-2C5364?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/Snowflake-Python%20%26%20SQL-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white"/>
+<img src="https://img.shields.io/badge/Snowflake-SnowPro%20Associate%20Platform-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white"/>
+<img src="https://img.shields.io/badge/Cloudthat-Generative%20AI%20with%20Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white"/>
+<img src="https://img.shields.io/badge/Skill%20Nation-Generative%20AI%20Tools-2C5364?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Free%20Academy.ai-Claude%20Code%20AI%20Powered%20Coding-D97757?style=for-the-badge"/>
 
 </div>
 
