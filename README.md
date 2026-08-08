@@ -118,7 +118,7 @@ A multilingual (13 Indian languages) legal-guidance platform: describe a legal p
 </details>
 
 <details>
-<summary><b>🔬 Research Assistant Crew</b> — five LLM agents, every claim gets a confidence stamp</summary>
+<summary><a href="https://github.com/praarn/researchAssitantCrewAgentic"><b>🔬 Research Assistant Crew</b></a> — five LLM agents, every claim gets a confidence stamp</summary>
 <br/>
 
 A question goes in; five specialized agents — planner, searcher, summarizer, fact-checker, writer — collaborate to produce a sourced report where every claim in the prose carries a visible, hoverable verdict: Verified, Plausible, Unverified, or Contradicted. Built entirely on free-tier infrastructure (Groq LLM, DuckDuckGo search, no paid API), and designed to degrade gracefully rather than crash when the free tier gets rate-limited.
@@ -127,7 +127,7 @@ A question goes in; five specialized agents — planner, searcher, summarizer, f
 </details>
 
 <details>
-<summary><b>📊 Data Pipeline Orchestrator</b> — five agents, zero silent transformations</summary>
+<summary><a href="https://github.com/praarn/dataPipelineOrchestratorAgentic"><b>📊 Data Pipeline Orchestrator</b></a> — five agents, zero silent transformations</summary>
 <br/>
 
 Ingest → Clean → Analyze → Visualize → Report, as five stateless agents behind a REST API and a deliberately zero-build vanilla JS frontend. Cleaning proposes a dry-run diff; nothing touches the data until a human approves it. Every statistical finding is backed by a real `scipy` test — t-test, ANOVA, Pearson, regression — never a heuristic dressed up as significance.
@@ -136,7 +136,7 @@ Ingest → Clean → Analyze → Visualize → Report, as five stateless agents 
 </details>
 
 <details>
-<summary><b>📚 clutchExams</b> — an academic resource platform, on its third real rebuild</summary>
+<summary><a href="https://github.com/praarn/academicBuddy"><b>📚 clutchExams</b></a> — an academic resource platform, on its third real rebuild</summary>
 <br/>
 
 A folder-tree academic resource browser — notes, papers, slides — with recursive global search, open browsing/download with no forced signup, and a single audited admin account (JWT + bcrypt) for uploads and management. Rebuilt twice: from a shared-token prototype to a real per-account auth system with a full login audit trail, without ever touching the neo-brutalist frontend identity that made v1 worth keeping.
@@ -203,16 +203,16 @@ Merges Open Library and Project Gutenberg into a single catalog with content-bas
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=praarn&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
-<img height="165" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=praarn&layout=compact&theme=tokyonight&hide_border=true"/>
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=praarn&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=praarn&layout=compact&theme=tokyonight&hide_border=true"/>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=praarn&theme=tokyonight&hide_border=true" />
+<img src="https://streak-stats.demolab.com/?user=praarn&theme=tokyonight&hide_border=true" />
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=praarn&theme=tokyo-night&hide_border=true" width="98%"/>
 
 </div>
 
-> **Note on the stats widgets:** the primary `github-readme-stats.vercel.app` endpoint is frequently overloaded — a long-running, widely reported issue on that project, not specific to this profile. The mirror above (rickstaa's fork) is the most reliable public alternative. If any widget shows a broken-image icon: hard-refresh (GitHub caches these aggressively), wait a few minutes, or fork [anuraghazra/github-readme-stats](https://github.com/anuraghazra/github-readme-stats) and deploy your own instance to Vercel (free, ~2 minutes) and point the URL at that instead.
+> **Note on the stats widgets:** these are free, community-run services (not GitHub's own), so any one can occasionally show a broken-image icon under load. `github-readme-stats.vercel.app` and `streak-stats.demolab.com` are the actively maintained official domains — the streak widget previously pointed at `.herokuapp.com`, which Heroku retired its free tier on, which is why it may have rendered oddly. If a widget still doesn't load: hard-refresh (GitHub caches these aggressively), wait a few minutes, or fork [anuraghazra/github-readme-stats](https://github.com/anuraghazra/github-readme-stats) / [DenverCoder1/github-readme-streak-stats](https://github.com/DenverCoder1/github-readme-streak-stats) and deploy your own instance to Vercel (free, ~2 minutes), then point the URL above at that instead.
 
 <br/>
 
@@ -222,10 +222,37 @@ Merges Open Library and Project Gutenberg into a single catalog with content-bas
 <img src="https://raw.githubusercontent.com/praarn/praarn/output/github-contribution-grid-snake-dark.svg" width="100%"/>
 </div>
 
-> This animation renders itself from your real contribution graph — it needs a one-time GitHub Actions setup (using [Platane/snk](https://github.com/Platane/snk)) that commits the SVG to an `output` branch on a schedule. Steps:
-> 1. In your `praarn/praarn` repo, add `.github/workflows/snake.yml` using the Platane/snk action (points at branch `output`).
-> 2. Push once — the Action generates the SVG automatically on schedule.
-> The `<img>` tag above is already wired to the resulting file, so once the workflow runs, the animation appears with no further edits needed.
+> **Why it's not loading yet:** this isn't a broken link — it's expected until the one-time GitHub Actions setup below is done. The image points at a file (`output/github-contribution-grid-snake-dark.svg`) that doesn't exist in your `praarn/praarn` repo until an Action generates and commits it, so right now the URL 404s.
+>
+> **Setup (one time, ~2 minutes):**
+> 1. In your `praarn/praarn` repo on GitHub, create a new file at `.github/workflows/snake.yml` and paste in:
+> ```yaml
+> name: generate snake
+> on:
+>   schedule:
+>     - cron: "0 0 * * *"   # once a day
+>   workflow_dispatch: {}
+>   push:
+>     branches: [ main ]
+> jobs:
+>   generate:
+>     runs-on: ubuntu-latest
+>     steps:
+>       - uses: Platane/snk@v3
+>         with:
+>           github_user_name: praarn
+>           outputs: |
+>             dist/github-contribution-grid-snake.svg
+>             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+>       - uses: crazy-max/ghaction-github-pages@v4
+>         with:
+>           target_branch: output
+>           build_dir: dist
+>         env:
+>           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+> ```
+> 2. Commit it, then go to the **Actions** tab and either wait for the scheduled run or click **Run workflow** to trigger it immediately.
+> 3. Once it finishes, it pushes the SVG to a new `output` branch — the `<img>` tag above is already pointed at that file, so the animation just appears. No further README edits needed.
 
 <br/>
 
