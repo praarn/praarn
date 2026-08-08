@@ -203,16 +203,18 @@ Merges Open Library and Project Gutenberg into a single catalog with content-bas
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=praarn&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=praarn&layout=compact&theme=tokyonight&hide_border=true"/>
+<img height="180" src="https://github-readme-stats.vercel.app/api?username=praarn&show_icons=true&hide_border=true&count_private=true&bg_color=0D1117&title_color=00C9A7&icon_color=00C9A7&text_color=c9d1d9&ring_color=00C9A7"/>
+<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=praarn&layout=compact&hide_border=true&bg_color=0D1117&title_color=00C9A7&text_color=c9d1d9&langs_count=8"/>
 
-<img src="https://streak-stats.demolab.com/?user=praarn&theme=tokyonight&hide_border=true" />
+<img src="https://streak-stats.demolab.com/?user=praarn&hide_border=true&background=0D1117&ring=00C9A7&fire=00C9A7&currStreakLabel=00C9A7&sideLabels=c9d1d9&currStreakNum=ffffff&sideNums=ffffff&dates=8a8a8a" />
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=praarn&theme=tokyo-night&hide_border=true" width="98%"/>
+<br/><br/>
+
+<img src="https://github-profile-trophy.vercel.app/?username=praarn&theme=darkhub&no-frame=true&no-bg=true&row=1&column=6&margin-w=8" />
 
 </div>
 
-> **Note on the stats widgets:** these are free, community-run services (not GitHub's own), so any one can occasionally show a broken-image icon under load. `github-readme-stats.vercel.app` and `streak-stats.demolab.com` are the actively maintained official domains — the streak widget previously pointed at `.herokuapp.com`, which Heroku retired its free tier on, which is why it may have rendered oddly. If a widget still doesn't load: hard-refresh (GitHub caches these aggressively), wait a few minutes, or fork [anuraghazra/github-readme-stats](https://github.com/anuraghazra/github-readme-stats) / [DenverCoder1/github-readme-streak-stats](https://github.com/DenverCoder1/github-readme-streak-stats) and deploy your own instance to Vercel (free, ~2 minutes), then point the URL above at that instead.
+> **Note on the stats widgets:** these are free, community-run services (not GitHub's own), so any one can occasionally show a broken-image icon under load — hard-refresh (GitHub caches images aggressively) or wait a few minutes if that happens. Colors above are set explicitly to match the header banner's teal (`#00C9A7`) rather than a canned theme, so it reads as one designed page instead of stitched-together widgets. `github-readme-stats.vercel.app`, `streak-stats.demolab.com`, and `github-profile-trophy.vercel.app` are the actively maintained official domains; if any stop responding, fork [anuraghazra/github-readme-stats](https://github.com/anuraghazra/github-readme-stats) / [DenverCoder1/github-readme-streak-stats](https://github.com/DenverCoder1/github-readme-streak-stats) / [ryo-ma/github-profile-trophy](https://github.com/ryo-ma/github-profile-trophy) and self-host on Vercel (free, ~2 minutes each).
 
 <br/>
 
@@ -222,7 +224,42 @@ Merges Open Library and Project Gutenberg into a single catalog with content-bas
 <img src="https://raw.githubusercontent.com/praarn/praarn/output/github-contribution-grid-snake-dark.svg" width="100%"/>
 </div>
 
-
+> **Why it's still not loading:** the workflow you added was missing one required line — by default, GitHub now gives the `GITHUB_TOKEN` **read-only** access, so the action ran but silently failed to push the SVG to the `output` branch. Two fixes needed together:
+>
+> 1. **Repo setting (one-time toggle):** go to `praarn/praarn` → **Settings → Actions → General → Workflow permissions**, select **"Read and write permissions"**, and save.
+> 2. **Add `permissions: contents: write`** to the workflow job — replace `.github/workflows/snake.yml` with this corrected version:
+> ```yaml
+> name: generate snake
+> on:
+>   schedule:
+>     - cron: "0 0 * * *"   # once a day
+>   workflow_dispatch: {}
+>   push:
+>     branches: [ main ]
+> jobs:
+>   generate:
+>     permissions:
+>       contents: write
+>     runs-on: ubuntu-latest
+>     timeout-minutes: 5
+>     steps:
+>       - uses: Platane/snk@v3
+>         with:
+>           github_user_name: praarn
+>           outputs: |
+>             dist/github-contribution-grid-snake.svg
+>             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+>       - uses: crazy-max/ghaction-github-pages@v4
+>         with:
+>           target_branch: output
+>           build_dir: dist
+>         env:
+>           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+> ```
+> 3. Go to the **Actions** tab → select the workflow → **Run workflow** to trigger it manually (don't wait for the daily cron). Check the run's logs — the push step should now say something like `branch output created` instead of failing silently.
+> 4. Once that run turns green, hard-refresh this README (GitHub caches images) and the animation appears.
+> 2. Commit it, then go to the **Actions** tab and either wait for the scheduled run or click **Run workflow** to trigger it immediately.
+> 3. Once it finishes, it pushes the SVG to a new `output` branch — the `<img>` tag above is already pointed at that file, so the animation just appears. No further README edits needed.
 
 <br/>
 
