@@ -56,6 +56,15 @@ Each project below ships a full stack — not just a model in a notebook. Expand
 <br/>
 
 <details open>
+<summary><a href="https://github.com/praarn/AirEcho"><b>🌬️ AirEcho</b></a> — ties your own pollution exposure to your own symptoms, honestly</summary>
+<br/>
+
+A personal air-quality health-risk correlator, built India-first: aligns lagged exposure windows (t-0/6h/24h/72h) against a personal symptom log, trains a personal RandomForest model with a population-model fallback and time-based (not random-split) evaluation, and answers questions through a grounded WHO/CPCB RAG advisory with an explicit refusal path when the corpus doesn't support an answer. The dashboard leads with the CPCB NAQI and GRAP-stage awareness for Delhi-NCR, and every exposure window carries a stated `data_coverage_pct` instead of pretending irregular real-world sensor data is clean.
+
+`FastAPI` `Next.js` `PostgreSQL + pgvector` `scikit-learn`
+</details>
+
+<details>
 <summary><a href="https://github.com/praarn/ACDS"><b>🛡️ Autonomous Cyber Defense System (ACDS)</b></a> — real-time intrusion detection, kernel to dashboard in under 5 seconds</summary>
 <br/>
 
@@ -87,7 +96,7 @@ Two layers that work together: a live operations console visualizing services, n
 </details>
 
 <details>
-<summary><a href="https://github.com/praarn/verafideFakeNewsDetector"><b>📰 Verafide</b></a> — fake news detection, and the 95%→86% accuracy gap I found and fixed</summary>
+<summary><a href="https://github.com/praarn/Verafide"><b>📰 Verafide</b></a> — fake news detection, and the 95%→86% accuracy gap I found and fixed</summary>
 <br/>
 
 A locally-trained ML classifier layered with LLM-reasoned verdicts (Groq), OCR-capable document/batch ingestion, and an AI summarizer chatbot, presented through a custom "verification desk" editorial UI. Trained on a 13,343-row balanced dataset across 13 topic buckets — and shipped with a diagnosed root cause for an accuracy drop from a benchmark-looking 95% down to a real-world 86%, traced to narrow-dataset overfitting and corrected rather than hidden.
@@ -96,7 +105,7 @@ A locally-trained ML classifier layered with LLM-reasoned verdicts (Groq), OCR-c
 </details>
 
 <details>
-<summary><a href="https://github.com/praarn/bureaucracySimplifier"><b>🧭 Saral</b></a> — bureaucracy simplifier, a genuine polyglot microservice system</summary>
+<summary><a href="https://github.com/praarn/Parchi"><b>🧭 Saral</b></a> — bureaucracy simplifier, a genuine polyglot microservice system</summary>
 <br/>
 
 Four independent services — frontend, API gateway, a Python AI service, and a background worker — talking over HTTP and a shared Postgres/Redis backend, built on one rule: **the fast path never blocks on the slow path.** Document upload returns instantly; extraction, OCR, and LLM reasoning run asynchronously on a durable BullMQ queue that survives crashes. The AI service only trusts requests carrying an internal shared token, so an accidental port exposure still isn't an open door.
@@ -118,12 +127,39 @@ A multilingual (13 Indian languages) legal-guidance platform: describe a legal p
 </details>
 
 <details>
+<summary><a href="https://github.com/praarn/FasalFair"><b>🌾 FasalFair</b></a> — Crop Price & Market Access Advisor, built for India's messiest public data</summary>
+<br/>
+
+Turns Agmarknet's inconsistent mandi-price data into something a farmer can act on: the real price nearby with an honest read on how stale it is, the best market to sell at after transport cost, a 7-day price forecast, a government-scheme eligibility check, and a voice-first way to ask any of it. The engineering centre is two pipelines — fuzzy-matched commodity/variety normalization that never force-matches or drops a record, and multi-source time alignment that flags every imputed value with a `days_stale` count instead of hiding the gap.
+
+`Next.js` `FastAPI` `PostgreSQL + pgvector` `scikit-learn`
+</details>
+
+<details>
+<summary><a href="https://github.com/praarn/TapRoot"><b>💧 Taproot</b></a> — municipal water-quality bulletins, traced back to the page they came from</summary>
+<br/>
+
+Government water-quality bulletins are published as inconsistent PDFs — different columns, different units, some scanned images instead of text. Taproot runs a tiered extraction pipeline (pdfplumber/PyMuPDF, falling back to OCR) behind a strict Pydantic validation gate: the LLM never writes to the database directly, and anything it can't confidently structure goes to a human review queue instead of being dropped or guessed. Ships with real anomaly detection (rolling z-score, IQR, IsolationForest), a cited RAG chat over the bulletins, and an explicitly-labelled turbidity-from-photo heuristic rather than a claimed lab measurement.
+
+`Next.js` `FastAPI` `PostgreSQL + pgvector`
+</details>
+
+<details>
 <summary><a href="https://github.com/praarn/researchAssitantCrewAgentic"><b>🔬 Research Assistant Crew</b></a> — five LLM agents, every claim gets a confidence stamp</summary>
 <br/>
 
 A question goes in; five specialized agents — planner, searcher, summarizer, fact-checker, writer — collaborate to produce a sourced report where every claim in the prose carries a visible, hoverable verdict: Verified, Plausible, Unverified, or Contradicted. Built entirely on free-tier infrastructure (Groq LLM, DuckDuckGo search, no paid API), and designed to degrade gracefully rather than crash when the free tier gets rate-limited.
 
 `FastAPI` `React` `Groq` `DuckDuckGo Search`
+</details>
+
+<details>
+<summary><a href="https://github.com/praarn/scientificDiscoveryCrewAgentic"><b>🧪 Scientific Discovery Crew</b></a> — four agents in a real research loop, human-gated</summary>
+<br/>
+
+Literature Review, Hypothesis Generation, Experiment Design, and Results Analysis agents run a genuine cyclical loop (LangGraph), each cycle's findings feeding the next — literature-grounded before a hypothesis is allowed, pre-registered before an experiment runs, and scored by real `scipy` statistics rather than an LLM guessing a p-value. Every `ResultsAnalysis` is explicitly flagged as single-cycle and pending replication, and the loop pauses for human approval by default — a research accelerator, not an autonomous scientist.
+
+`FastAPI` `LangGraph` `React` `scipy` `Groq`
 </details>
 
 <details>
@@ -145,7 +181,7 @@ A folder-tree academic resource browser — notes, papers, slides — with recur
 </details>
 
 <details>
-<summary><a href="https://github.com/praarn/skillGapMapper"><b>📈 Skill Gap Mapper</b></a> — career-intelligence, audited post-build for real production bugs</summary>
+<summary><a href="https://github.com/praarn/Aimly"><b>📈 Skill Gap Mapper</b></a> — career-intelligence, audited post-build for real production bugs</summary>
 <br/>
 
 Resume-to-role fit scored by a deterministic, weighted algorithm — 50% skill coverage, 30% experience relevance, 20% project quality — layered with live job-market data, ATS compatibility checks, and resume optimization suggestions. Shipped with a documented post-launch audit that caught and fixed 7 real issues, rather than a README that pretends the first build was clean.
@@ -154,7 +190,7 @@ Resume-to-role fit scored by a deterministic, weighted algorithm — 50% skill c
 </details>
 
 <details>
-<summary><a href="https://github.com/praarn/healthAssistant"><b>🏥 Healthcare Cost Predictor</b></a> — every number is traceable, none of them come from an LLM</summary>
+<summary><a href="https://github.com/praarn/FairCare"><b>🏥 Healthcare Cost Predictor</b></a> — every number is traceable, none of them come from an LLM</summary>
 <br/>
 
 An India medical-cost estimator with government health-scheme eligibility checks and empanelled-hospital surfacing. The one non-negotiable design rule: no cost figure or eligibility result is ever generated by an LLM — every number traces back to a structured JSON data source, and every approximation is explicitly labeled as one instead of being silently substituted.
@@ -242,7 +278,6 @@ Merges Open Library and Project Gutenberg into a single catalog with content-bas
 <img src="https://img.shields.io/badge/Snowflake-SnowPro%20Associate%20Platform-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white"/>
 <img src="https://img.shields.io/badge/Cloudthat-Generative%20AI%20with%20Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white"/>
 <img src="https://img.shields.io/badge/Skill%20Nation-Generative%20AI%20Tools-2C5364?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/Free%20Academy.ai-Claude%20Code%20AI%20Powered%20Coding-D97757?style=for-the-badge"/>
 
 </div>
 
